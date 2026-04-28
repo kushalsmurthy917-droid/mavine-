@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git https://github.com/kushalsmurthy917-droid/mavine-.git
+                git 'https://github.com/kushalsmurthy917-droid/mavine-.git'
             }
         }
 
