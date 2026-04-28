@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Mallikarjun067/maven.git',
+                    url: 'https://github.com/kushalsmurthy917-droid/mavine-.git',
                     credentialsId: 'github-token'
             }
         }
@@ -48,7 +48,7 @@ pipeline {
             emailext (
                 subject: "SUCCESS: ${JOB_NAME} #${BUILD_NUMBER}",
                 body: "Build succeeded!\nCheck: ${BUILD_URL}",
-                to: "malliknayakmedni@gmail.com"
+                to: "kushalsmurthy917@gmail.com"
             )
         }
 
@@ -56,7 +56,7 @@ pipeline {
             emailext (
                 subject: "FAILED: ${JOB_NAME} #${BUILD_NUMBER}",
                 body: "Build failed!\nCheck: ${BUILD_URL}",
-                to: "malliknayakmedni@gmail.com"
+                to: "kushalsmurthy917@gmail.com"
             )
         }
     }
